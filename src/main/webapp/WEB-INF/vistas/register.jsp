@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h1>Registro</h1>
-	<form>
+	<form action="${home}/registro" method="post">
 		<label for="username">Usuario</label> <input type="text" id="username"
 			name="username" required><br> <label for="email">Email:</label>
 		<input type="email" id="email" name="email" required><br>

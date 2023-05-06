@@ -11,7 +11,7 @@ public class EMF {
 	
 	public static EntityManagerFactory getEmf() {
 		if(emf == null) {
-			emf = Persistence.createEntityManagerFactory("banco");
+			emf = Persistence.createEntityManagerFactory("hackatonUNIR");
 		}
 		return emf;
 	}

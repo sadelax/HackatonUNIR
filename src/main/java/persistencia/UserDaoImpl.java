@@ -1,7 +1,5 @@
 package persistencia;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
@@ -13,22 +11,19 @@ public class UserDaoImpl implements UserDao {
 	private EntityManager em;
 	
 	@Override
-	public void save(User u) {
+	public boolean save(User u) {
 		em = EMF.getEmf().createEntityManager();
-		try {
-			TypedQuery<User> q = em.createQuery("SELECT u FROM User u WHERE u.username = :username", User.class);
-			q.setParameter("username", u.getUsername());
-			List<User> res = q.getResultList();
-			
-			if(res.isEmpty()) {
-				em.getTransaction().begin();
-				em.merge(u);
-				em.getTransaction().commit();
-			}
+		try {			
+			em.getTransaction().begin();
+			em.persist(u);
+			em.getTransaction().commit();
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
+			return false;
+		} finally {
+			em.close();			
 		}
-		em.close();
 	}
 
 	@Override

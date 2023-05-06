@@ -17,7 +17,7 @@
       <h1>¡Siempre eres bienvenido aqui!</h1>
       <p>Por favor registrate para continuar.</p>
     </div>
-    <form class="login-form">
+    <form class="login-form" action="${home}/login" method="post">
       <h2>Inicio de sesión</h2>
       <a href="${home}/registro">¿No tienes cuenta aún? ¡Registrate!</a>
       <label for="username">Usuario o Email</label>

@@ -10,13 +10,7 @@ public class RegistroLoginImpl implements RegistroLogin {
 
 	@Override
 	public boolean registro(User u) {
-		if(u != null) {
-			ud.save(u);
-			return true;
-		} else {
-			return false;
-		}
-		
+		return ud.save(u);
 	}
 
 	@Override

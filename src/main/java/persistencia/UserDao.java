@@ -5,7 +5,7 @@ import modelo.User;
 public interface UserDao {
 
 	// registro
-	public void save(User u);
+	public boolean save(User u);
 	
 	// login
 	public User login(String usuario, String password);

@@ -7,9 +7,11 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
+@Table(name = "users")
 public class User implements Serializable, Comparable<User> {
 
 	@Id
@@ -29,12 +31,13 @@ public class User implements Serializable, Comparable<User> {
 	
 	public User() {}
 	
-	public User(String username, String email, String gender, String orientation, String password) {
+	public User(String username, String email, String gender, String orientation, String password, String password2) {
 		this.username = username;
 		this.email = email;
 		this.gender = gender;
 		this.orientation = orientation;
 		this.password = password;
+		this.password2 = password2;
 	}
 
 	public int getIdUser() {

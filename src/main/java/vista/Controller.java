@@ -85,10 +85,12 @@ public class Controller extends HttpServlet {
 			
 			if (isNotEmpty(user) && isNotEmpty(email) && isNotEmpty(gender) && isNotEmpty(orientation) && isNotEmpty(password) && isNotEmpty(password2)) {
 				if(password.equals(password2)) {
-					User nuevo = new User(user, email, gender, orientation, password);
+					User nuevo = new User(user, email, gender, orientation, password, password2);
 					if(rl.registro(nuevo)) {
 						resp.sendRedirect(context + "/home/index");
 						System.out.println("usuario registrado");
+					} else {
+						System.out.println("usuario fail");
 					}
 				}
 			}
