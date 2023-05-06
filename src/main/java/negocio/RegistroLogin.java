@@ -5,8 +5,8 @@ import modelo.User;
 public interface RegistroLogin {
 
 	// registrar usuario
-	void registro(User u);
+	boolean registro(User u);
 	
 	// login usuario ya registrado
-	void login(User u);
+	User login(String username, String password);
 }

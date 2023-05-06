@@ -19,7 +19,7 @@
     </div>
     <form class="login-form">
       <h2>Inicio de sesión</h2>
-      <a href="#">¿No tienes cuenta aún? ¡Registrate!</a>
+      <a href="${home}/registro">¿No tienes cuenta aún? ¡Registrate!</a>
       <label for="username">Usuario o Email</label>
       <input type="text" id="username" name="username" required>
       <label for="password">Contraseña</label>

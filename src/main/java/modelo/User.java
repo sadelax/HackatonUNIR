@@ -13,28 +13,27 @@ import javax.persistence.Id;
 public class User implements Serializable, Comparable<User> {
 
 	@Id
-	@Column(name = "User_ID")
+	@Column(name = "id_user")
 	private int idUser;
 	private String username;
-	private String apellido1;
 	private String email;
+	@Column(name = "dob")
 	private Date birthday;
+	private String gender;
+	@Column(name = "s_orientation")
+	private String orientation;
+	private String country;
+	private String province;
 	private String password;
-	private String role;
-	private Date createdDate;
-	private Date lastLogin;
+	private String password2;
 	
 	public User() {}
 	
-	public User(String username, String email, String password) {
+	public User(String username, String email, String gender, String orientation, String password) {
 		this.username = username;
 		this.email = email;
-		this.password = password;
-	}
-	
-	public User(String username, String apellido1, String email, String password) {
-		this.username = username;
-		this.email = email;
+		this.gender = gender;
+		this.orientation = orientation;
 		this.password = password;
 	}
 
@@ -52,14 +51,6 @@ public class User implements Serializable, Comparable<User> {
 
 	public void setUsername(String username) {
 		this.username = username;
-	}
-
-	public String getApellido1() {
-		return apellido1;
-	}
-
-	public void setApellido1(String apellido1) {
-		this.apellido1 = apellido1;
 	}
 
 	public String getEmail() {
@@ -86,28 +77,44 @@ public class User implements Serializable, Comparable<User> {
 		this.password = password;
 	}
 
-	public String getRole() {
-		return role;
+	public String getGender() {
+		return gender;
 	}
 
-	public void setRole(String role) {
-		this.role = role;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
-	public Date getCreatedDate() {
-		return createdDate;
+	public String getOrientation() {
+		return orientation;
 	}
 
-	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
+	public void setOrientation(String orientation) {
+		this.orientation = orientation;
 	}
 
-	public Date getLastLogin() {
-		return lastLogin;
+	public String getCountry() {
+		return country;
 	}
 
-	public void setLastLogin(Date lastLogin) {
-		this.lastLogin = lastLogin;
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getProvince() {
+		return province;
+	}
+
+	public void setProvince(String province) {
+		this.province = province;
+	}
+
+	public String getPassword2() {
+		return password2;
+	}
+
+	public void setPassword2(String password2) {
+		this.password2 = password2;
 	}
 
 	@Override

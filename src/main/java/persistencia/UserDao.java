@@ -1,8 +1,12 @@
 package persistencia;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import modelo.User;
 
-public interface UserDao extends JpaRepository<User, Integer> {
+public interface UserDao {
 
+	// registro
+	public void save(User u);
+	
+	// login
+	public User login(String usuario, String password);
 }
