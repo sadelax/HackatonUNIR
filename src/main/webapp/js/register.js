@@ -1,7 +1,9 @@
 // Get the registration form and the input fields
 const registrationForm = document.querySelector('form');
-const nameField = document.getElementById('name');
+const usernameField = document.getElementById('username');
 const emailField = document.getElementById('email');
+const passwordField = document.getElementById('password');
+const password2Field = document.getElementById('password2');
 const phoneField = document.getElementById('phone');
 const dobField = document.getElementById('dob');
 const genderField = document.getElementById('gender');
@@ -15,8 +17,10 @@ registrationForm.addEventListener('submit', (event) => {
   event.preventDefault(); // Prevent the form from submitting
 
   // Get the values of the input fields
-  const name = nameField.value;
+  const username = usernameField.value;
   const email = emailField.value;
+  const password = passwordField.value;
+  const password2 = password2Field.value;
   const phone = phoneField.value;
   const dob = dobField.value;
   const gender = genderField.value;
@@ -28,8 +32,11 @@ registrationForm.addEventListener('submit', (event) => {
   // TODO: Add code here to validate the input fields and submit the form
 
   // Clear the input fields
-  nameField.value = '';
+  usernameField.value = '';
   emailField.value = '';
+
+  passwordField.value = '';
+  password1Field.value = '';
   phoneField.value = '';
   dobField.value = '';
   genderField.value = '';
