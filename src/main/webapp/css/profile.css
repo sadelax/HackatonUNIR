@@ -1,0 +1,41 @@
+body {
+  background-color: #C0D6DF;
+  font-family: 'Press Start 2P', cursive;
+  color: #2B2B2B;
+  background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png');
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(247, 225, 215, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+  font-size: 20px;
+}
+
+.profile-details span {
+  font-weight: bold;
+  color: #e3bfd4;
+}
+
+h1 {
+  text-align: center;
+  color: #6EB4D1;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
