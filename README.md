@@ -75,7 +75,7 @@ El proyecto está construido con:
 
 ## Prueba el proyecto
 
-Para probar el proyecto, visita el [repositorio de GitHub](https://github.com/sadelax/HackatonUNIR) y sigue las instrucciones de instalación. También puedes consultar la [documentación en Google Drive](https://docs.google.com).
+Para probar el proyecto, visita el [repositorio de GitHub](https://github.com/sadelax/HackatonUNIR)  y sigue las instrucciones de instalación **TO_DO**. También puedes consultar la [documentación en Google Drive](https://docs.google.com).
 
 ## Autores
 
