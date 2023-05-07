@@ -14,8 +14,7 @@
 <body>
   <div class="login-page">
     <div class="login-title">
-      <h1>¡Siempre eres bienvenido aqui!</h1>
-      <p>Por favor registrate para continuar.</p>
+      <h1>¡Siempre eres bienvenido aquí!</h1>
     </div>
     <form class="login-form" action="${home}/login" method="post">
       <h2>Inicio de sesión</h2>

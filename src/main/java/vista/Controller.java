@@ -37,6 +37,14 @@ public class Controller extends HttpServlet {
 			case "/index":
 				req.getRequestDispatcher("/WEB-INF/vistas/index.jsp").forward(req, resp);
 				break;
+			case "/servicios":
+				req.getRequestDispatcher("/WEB-INF/vistas/servicios.jsp").forward(req, resp);
+				break;
+			case "/cerrar_sesion":
+				req.getSession().invalidate();
+				req.getRequestDispatcher("/WEB-INF/vistas/login.jsp").forward(req, resp);
+				break;
+				
 			}
 		} else {
 			switch(path) {
